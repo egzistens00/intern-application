@@ -62,6 +62,7 @@ namespace InternAPI.Controllers
                 return NotFound();
             }
 
+            // Update fields
             existingIntern.Name = intern.Name;
             existingIntern.Email = intern.Email;
             existingIntern.Education = intern.Education;
