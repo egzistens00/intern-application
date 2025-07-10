@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "L+3QH43rfomE+gYFpkO3BA8i0NANeJgPlOjmiUzPZsQ=",
+  "Source": "InternAPI",
+  "BasePath": "_content/InternAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "InternAPI\\wwwroot",
+      "Source": "InternAPI",
+      "ContentRoot": "C:\\Users\\alifd\\Desktop\\InternProject\\InternAPI\\InternAPI\\wwwroot\\",
+      "BasePath": "_content/InternAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\alifd\\Desktop\\InternProject\\InternAPI\\InternAPI\\wwwroot\\resumes\\3fe8341a-4269-4e7b-93a6-bc3319df48e3.pdf",
+      "SourceId": "InternAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alifd\\Desktop\\InternProject\\InternAPI\\InternAPI\\wwwroot\\",
+      "BasePath": "_content/InternAPI",
+      "RelativePath": "resumes/3fe8341a-4269-4e7b-93a6-bc3319df48e3.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resumes\\3fe8341a-4269-4e7b-93a6-bc3319df48e3.pdf"
+    }
+  ]
+}
