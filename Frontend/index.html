@@ -78,7 +78,7 @@
           </div>
 
           <!-- Submit -->
-          <button type="submit" class="btn btn-primary">Submit Application</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Submit Application</button>
         </form>
       </div>
     </div>
@@ -87,6 +87,10 @@
   <script>
     document.getElementById("internForm").addEventListener("submit", function (e) {
       e.preventDefault();
+
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
 
       const internData = {
         name: document.getElementById("name").value,
@@ -97,7 +101,7 @@
         duration: document.getElementById("duration").value
       };
 
-      fetch("https://alif-intern-api.azurewebsites.net/api/Interns", {
+      fetch("https://intern-api-alif.azurewebsites.net/api/Interns", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(internData)
@@ -113,6 +117,10 @@
         .catch(error => {
           console.error("Error:", error);
           alert("⚠️ Error submitting application. Please try again.");
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Application";
         });
     });
   </script>

@@ -1,10 +1,17 @@
 window.onload = async function () {
   try {
-    const response = await fetch('https://localhost:7021/api/Interns');
+    const response = await fetch('https://intern-api-alif.azurewebsites.net/api/interns');
     if (!response.ok) throw new Error('Failed to fetch data');
     
     const interns = await response.json();
     const tableBody = document.querySelector('#applicationsTable tbody');
+
+    if (interns.length === 0) {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td colspan="8" class="text-center text-muted">No applications found.</td>`;
+      tableBody.appendChild(row);
+      return;
+    }
 
     interns.forEach(intern => {
       const row = document.createElement('tr');
@@ -17,7 +24,7 @@ window.onload = async function () {
         <td>${intern.phone}</td>
         <td>${intern.gender}</td>
         <td>${intern.duration}</td>
-        <td><a href="https://localhost:7021/resumes/${intern.resumeFileName}" target="_blank">View Resume</a></td>
+        <td>N/A</td> <!-- Replace with resume link if implemented -->
       `;
 
       tableBody.appendChild(row);
