@@ -40,10 +40,10 @@ A internship applications built with **ASP.NET Core Web API**, **SQL Server**, a
 ![Admin Login Screenshot](screenshots/admin-login.png)
 
 ### 📋 Admin Application Dashboard  
-![Admin Dashboard Screenshot](screenshots/admin-dashboard.png)
+![Admin Dashboard Screenshot](screenshots/admin-application-data.png)
 
 ### 🗄️ Data Stored in SQL Server  
-![SQL Server Screenshot](screenshots/sql-database.png)
+![SQL Server Screenshot](screenshots/SQL-server-database.png)
 
 
 
