@@ -31,5 +31,45 @@ A internship applications built with **ASP.NET Core Web API**, **SQL Server**, a
 
 ---
 
-## 📂 Project Structure
+## 📸 Screenshots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🧠 Learning Highlights
+
+
+- Azure Web App & Static Site Hosting
+- ASP.NET Core Web API CRUD operations
+- SQL Server DB with Entity Framework Core
+- GitHub Actions for automated deployment
+- CORS configuration between frontend & backend
+
+
+
+
+
+
+📧 Contact
+👤 Name: Alif Danial
+💼 LinkedIn: linkedin.com/in/alifdanial969
+📫 Email: alifdanial969@gmail.com
 
