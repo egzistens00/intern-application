@@ -1,0 +1,17 @@
+# Build and output folders
+bin/
+obj/
+publish/
+out/
+clean/
+
+# User-specific
+*.user
+*.zip
+
+# Logs
+*.log
+
+# Local uploads (optional)
+Resumes/
+wwwroot/resumes/
