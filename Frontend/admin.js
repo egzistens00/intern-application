@@ -24,7 +24,7 @@ window.onload = async function () {
         <td>${intern.phone}</td>
         <td>${intern.gender}</td>
         <td>${intern.duration}</td>
-        <td>N/A</td> <!-- Replace with resume link if implemented -->
+        <td>N/A</td> <!-- Add resume link here if available -->
       `;
 
       tableBody.appendChild(row);
@@ -32,5 +32,6 @@ window.onload = async function () {
 
   } catch (err) {
     alert('Error loading applications: ' + err.message);
+    console.error(err);
   }
 };
