@@ -34,16 +34,16 @@ A internship applications built with **ASP.NET Core Web API**, **SQL Server**, a
 ## 📸 Screenshots
 
 ### 📝 Submit Internship Application Form  
-![Submit Form Screenshot](Screenshots/submit_form.png)
+![Submit Form Screenshot](Screenshots/Submit_Form.png)
 
 ### 🔐 Admin Login Page  
-![Admin Login Screenshot](Screenshots/admin_login.png)
+![Admin Login Screenshot](Screenshots/Admin_Login.png)
 
 ### 📋 Admin Application Dashboard  
-![Admin Dashboard Screenshot](Screenshots/admin_application_data.png)
+![Admin Dashboard Screenshot](Screenshots/Admin_Application_Data.png)
 
 ### 🗄️ Data Stored in SQL Server  
-![SQL Server Screenshot](Screenshots/sql_server_database.png)
+![SQL Server Screenshot](Screenshots/Sql_Server_Database.png)
 
 
 
