@@ -1,17 +1,22 @@
 ﻿using InternAPI.Data;
+using InternAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 👉 Add services to the container
+// STEP 1: Fetch credentials from Vault
+var vaultService = new VaultService();
+var (username, password) = await vaultService.GetDbCredentialsAsync();
 
-// Use InMemory database (can replace with SQL later)
-// NEW (Azure SQL)
+// STEP 2: Build SQL connection string using Vault credentials
+var connectionString = $"Server=intern-db-server.database.windows.net;Database=InternAppDB;User Id={username};Password={password};Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+// STEP 3: Register services
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
 
+builder.Services.AddSingleton(vaultService);
 
-// Enable CORS for all origins (for frontend/API access)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -26,25 +31,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// STEP 4: Build app
 var app = builder.Build();
 
-// 👉 Configure the HTTP request pipeline
-
 app.UseCors("AllowAll");
-
 app.UseSwagger();
 app.UseSwaggerUI();
-app.UseStaticFiles(); // 🔥 Important for serving /resumes/<filename>
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
 
-// ✅ Homepage
+// Health check & default routes
 app.MapGet("/", () => "🎉 Welcome to Alif's Intern API!");
-
-// ✅ Health check route
 app.MapGet("/test", () => "✅ Intern API is running on Azure!");
 
 app.Run();

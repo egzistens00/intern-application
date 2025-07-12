@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using InternAPI.Data;
 using InternAPI.Models;
+using InternAPI.Services; // ✅ Add this for VaultService
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InternAPI.Controllers
 {
@@ -10,10 +13,20 @@ namespace InternAPI.Controllers
     public class InternsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly VaultService _vaultService;
 
-        public InternsController(AppDbContext context)
+        public InternsController(AppDbContext context, VaultService vaultService)
         {
             _context = context;
+            _vaultService = vaultService;
+        }
+
+        // ✅ GET: api/Interns/dbcreds (demo Vault secret access)
+        [HttpGet("dbcreds")]
+        public async Task<IActionResult> GetDbCreds()
+        {
+            var (username, password) = await _vaultService.GetDbCredentialsAsync();
+            return Ok(new { username, password });
         }
 
         // GET: api/Interns
