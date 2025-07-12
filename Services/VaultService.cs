@@ -13,13 +13,10 @@ namespace InternAPI.Services
         {
             var vaultUri = "http://127.0.0.1:8200";
 
+
             var vaultToken = Environment.GetEnvironmentVariable("VAULT_TOKEN");
 
             
-
-
-            // Replace with secure token source later
-
             var authMethod = new TokenAuthMethodInfo(vaultToken);
             var settings = new VaultClientSettings(vaultUri, authMethod);
             _vaultClient = new VaultClient(settings);
