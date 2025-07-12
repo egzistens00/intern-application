@@ -58,6 +58,9 @@ The app uses environment variables to fetch secrets safely.
 ### 🗄️ Data Stored in SQL Server  
 ![SQL Server Screenshot](screenshots/SQL-server-database.png)
 
+### 📝 Vault Code 
+![SQL Server Screenshot](screenshots/vault-code.png)
+
 ---
 
 ## 🧠 Learning Highlights
