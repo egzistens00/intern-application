@@ -59,7 +59,7 @@ The app uses environment variables to fetch secrets safely.
 ![SQL Server Screenshot](screenshots/SQL-server-database.png)
 
 ### 📝 Vault Code 
-![SQL Server Screenshot](screenshots/vault-code.png)
+![Vault Code](screenshots/vault_code.png)
 
 ---
 
